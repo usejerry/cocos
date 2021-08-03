@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "757201b3-1f61-4861-bc6b-dbcc69b0a80d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 448,
+  "height": 240,
+  "platformSettings": {},
+  "subMetas": {
+    "coures1_SLO": {
+      "ver": "1.0.4",
+      "uuid": "ef90475a-a654-4f92-b939-65444cf75962",
+      "rawTextureUuid": "757201b3-1f61-4861-bc6b-dbcc69b0a80d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 448,
+      "height": 240,
+      "rawWidth": 448,
+      "rawHeight": 240,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

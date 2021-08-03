@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "e4d06d8a-7de7-473b-8680-e5cf55ae4e6f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 523,
+  "height": 26,
+  "platformSettings": {},
+  "subMetas": {
+    "blood_stick_bg": {
+      "ver": "1.0.4",
+      "uuid": "d1d11f27-695a-4015-aa59-1ddd6b9a0632",
+      "rawTextureUuid": "e4d06d8a-7de7-473b-8680-e5cf55ae4e6f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 523,
+      "height": 26,
+      "rawWidth": 523,
+      "rawHeight": 26,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
