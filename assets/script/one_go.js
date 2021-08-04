@@ -15,7 +15,8 @@ cc.Class({
             type:cc.Prefab
         },
         button: cc.Button,
-        log:null
+        log:null,
+        mySpr:cc.Sprite
     },
     // LIFE-CYCLE CALLBACKS:
 
@@ -29,6 +30,9 @@ cc.Class({
         //         console.log("确认");
         //     }
         // });
+    },
+    show_rule(){
+        this.show_log()
     },
     show_log(){
         let log = cc.instantiate(this.dialog)
