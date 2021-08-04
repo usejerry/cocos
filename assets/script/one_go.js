@@ -27,7 +27,7 @@ cc.Class({
         //     if (type == "取消") {
         //         console.log("取消");
         //     }
-        //     if (type == "确认") {
+        //     if (type == "确认") { 
         //         console.log("确认");
         //     }
         // });
