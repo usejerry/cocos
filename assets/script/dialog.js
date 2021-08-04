@@ -27,6 +27,7 @@ cc.Class({
         // },
     },
 
+
     // LIFE-CYCLE CALLBACKS:
     clearCallback:function(){
         this.setTips("");
@@ -42,7 +43,7 @@ cc.Class({
         this.setCancelCallback(cancelCallback);
         this.setCloseCallback(closeCallback);
     },
-
+    
     // update (dt) {},
     onClickOk:function(){
         cc.log("ok event");

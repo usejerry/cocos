@@ -16,7 +16,8 @@ cc.Class({
         },
         button: cc.Button,
         log:null,
-        mySpr:cc.Sprite
+        mySpr:cc.Sprite,
+        showRule:cc.Button
     },
     // LIFE-CYCLE CALLBACKS:
 
@@ -38,7 +39,8 @@ cc.Class({
         let log = cc.instantiate(this.dialog)
         this.node.addChild(log)
         log.setPosition(cc.v2(20,30))
-        // var scriptComponent = log.getComponent("alertPrefab");
+        var scriptComponent = log.getComponent("dialog");
+        console.log(scriptComponent)
         // scriptComponent.show("是否进入副本？",function(){
         //     cc.log("OK 回调函数")
         // },function(){
@@ -46,6 +48,7 @@ cc.Class({
         // },function(){
         //     cc.log("Close 回调函数")
         // });
+        scriptComponent.setTips("错误")
     },
     goOne:function(button){
         cc.director.loadScene('two_scene')

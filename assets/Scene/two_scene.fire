@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 30
+        "__id__": 31
       }
     ],
     "_active": false,
@@ -90,13 +90,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 27
-      },
-      {
         "__id__": 28
       },
       {
         "__id__": 29
+      },
+      {
+        "__id__": 30
       }
     ],
     "_prefab": null,
@@ -186,7 +186,7 @@
       "array": [
         0,
         0,
-        518.1808876956452,
+        541.2658773652742,
         0,
         0,
         0,
@@ -975,7 +975,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Button",
+    "_name": "rule",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1002,7 +1002,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 119,
       "height": 40
     },
     "_anchorPoint": {
@@ -1071,7 +1071,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 119,
       "height": 40
     },
     "_anchorPoint": {
@@ -1274,7 +1274,11 @@
     "_grayMaterial": null,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 27
+      }
+    ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 2,
@@ -1345,6 +1349,16 @@
     "_id": "20ADnepEZFDZkqMKhNKCPl"
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 2
+    },
+    "component": "",
+    "_componentId": "c70acD/Gp1G0KuZNPBxWHnf",
+    "handler": "show_rule",
+    "customEventData": ""
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -1396,10 +1410,13 @@
       "__id__": 2
     },
     "_enabled": true,
-    "dialog": null,
+    "dialog": {
+      "__uuid__": "f926a958-3c09-4bcd-8085-39f08d3a4d89"
+    },
     "button": null,
     "log": null,
     "mySpr": null,
+    "showRule": null,
     "_id": "c5Y36YyZ5FcIK+zWTazHS/"
   },
   {
@@ -1413,7 +1430,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 31
+        "__id__": 32
       }
     ],
     "_prefab": null,
@@ -1469,7 +1486,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 30
+      "__id__": 31
     },
     "_enabled": true,
     "_materials": [
