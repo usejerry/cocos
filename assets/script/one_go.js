@@ -37,7 +37,7 @@ cc.Class({
     },
     show_log(){
         let log = cc.instantiate(this.dialog)
-        this.node.addChild(log)
+        this.node.addChild(log) 
         log.setPosition(cc.v2(20,30))
         var scriptComponent = log.getComponent("dialog");
         console.log(scriptComponent)
