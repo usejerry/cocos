@@ -31,6 +31,10 @@ cc.Class({
         //         console.log("确认");
         //     }
         // });
+        window.HttpHelper.httpGet('https://mockapi.eolinker.com/y7UHLDN88b3725cb8a379757bf303f2ab477f0fa56905b8/rtsiii/tag/user_tag',(data)=>{
+            console.log(data)
+        })
+        // console.log(window.HttpHelper)
     },
     show_rule(){
         this.show_log()
@@ -55,7 +59,7 @@ cc.Class({
 
     },
     goTwo:function(button){
-        cc.director.loadScene('one_scene')
+        cc.director.loadScene('game')
     },
     // update (dt) {},
 });
