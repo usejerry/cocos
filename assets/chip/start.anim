@@ -1,0 +1,85 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "start",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.5,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "start_jmi": {
+        "props": {
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.75,
+              "value": 100
+            },
+            {
+              "frame": 1.5,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "start_warning": {
+        "props": {
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.75,
+              "value": 100
+            },
+            {
+              "frame": 1.5,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "start_shi": {
+        "props": {
+          "x": [
+            {
+              "frame": 0,
+              "value": 569.965
+            },
+            {
+              "frame": 0.25,
+              "value": 409.965
+            },
+            {
+              "frame": 0.5,
+              "value": 249.965
+            },
+            {
+              "frame": 0.75,
+              "value": 89.965
+            },
+            {
+              "frame": 1,
+              "value": -71.965
+            },
+            {
+              "frame": 1.25,
+              "value": -131.965
+            },
+            {
+              "frame": 1.5,
+              "value": -291.965
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
