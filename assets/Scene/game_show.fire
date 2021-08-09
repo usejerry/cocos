@@ -687,7 +687,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Button",
+    "_name": "shooting",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
