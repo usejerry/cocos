@@ -1,7 +1,7 @@
 {
   "title": "cocos",
   "packageName": "org.cocos2d.demo",
-  "startScene": "55adbd5a-3ef0-4e70-908c-f501c613cb73",
+  "startScene": "d65eaee2-0975-4c79-b9e3-80ae6dcadfca",
   "excludeScenes": [],
   "orientation": {
     "landscapeLeft": true,

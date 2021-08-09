@@ -59,7 +59,7 @@ cc.Class({
 
     },
     goTwo:function(button){
-        cc.director.loadScene('game')
+        cc.director.loadScene('game_show')
     },
     // update (dt) {},
 });
