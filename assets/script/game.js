@@ -37,7 +37,10 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        console.log(this.node.width)
+        let p = cc.director.getCollisionManager()
+        p.enabled = true
+        // p.enabledDebugDraw = true;
+        // p.gravity = cc.v2(0,0)
     },
     start () {
 

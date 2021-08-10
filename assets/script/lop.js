@@ -18,6 +18,46 @@ cc.Class({
 
     onLoad () {
         cc.systemEvent.on('keydown',this.onkeypress,this)
+
+    },
+    // 只在两个碰撞体开始接触时被调用一次
+    onBeginContact: function (contact, selfCollider, otherCollider) {
+        console.log(22222)
+    },
+    onCollisionEnter: function (other, self) {
+        console.log(other,1);
+        console.log(self,2);
+
+    
+        // 碰撞系统会计算出碰撞组件在世界坐标系下的相关的值，并放到 world 这个属性里面
+        var world = self.world;
+    
+        // 碰撞组件的 aabb 碰撞框
+        var aabb = world.aabb;
+    
+        // 节点碰撞前上一帧 aabb 碰撞框的位置
+        var preAabb = world.preAabb;
+    
+        // 碰撞框的世界矩阵
+        var t = world.transform;
+    
+        // 以下属性为圆形碰撞组件特有属性
+        var r = world.radius;
+        var p = world.position;
+    
+        // 以下属性为 矩形 和 多边形 碰撞组件特有属性
+        var ps = world.points;
+    },
+    // 只在两个碰撞体结束接触时被调用一次
+    onEndContact: function (contact, selfCollider, otherCollider) {
+    },
+    
+    // 每次将要处理碰撞体接触逻辑时被调用
+    onPreSolve: function (contact, selfCollider, otherCollider) {
+    },
+    
+    // 每次处理完碰撞体接触逻辑时被调用
+    onPostSolve: function (contact, selfCollider, otherCollider) {
     },
     onkeypress(e){
         console.log(e.keyCode)
