@@ -1,11 +1,23 @@
 {
   "last-module-event-record-time": 1628085468919,
   "group-list": [
-    "default"
+    "default",
+    "boom",
+    "target_go"
   ],
   "collision-matrix": [
     [
       true
+    ],
+    [
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false
     ]
   ],
   "excluded-modules": [
