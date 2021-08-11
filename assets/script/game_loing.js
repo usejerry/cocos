@@ -39,28 +39,6 @@ cc.Class({
         this.getGyroscope()
         cc.director.loadScene('home')
     },
-    onDeviceOrientationChangeEvent(data){
-        console.log(data)
-    },
-	// 获取陀螺仪权限
-	getGyroscope(){
-		let _this = this
-		if ( window.DeviceOrientationEvent !== undefined && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
-			window.DeviceOrientationEvent.requestPermission().then( function ( response ) {
-				if ( response == 'granted' ) {
-					window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
-					_this.isTouch = false
-				} else if( response == 'denied' ) {
-					_this.isTouch = true
-				}
-			} ).catch( function ( error ) {
-			} );
-		} else {
-			window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
-			_this.isTouch = false
-			// _this.isTouch = true
-		}
-	},
     start () {
 
     },

@@ -24,6 +24,10 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        target_go:{
+            type:cc.Sprite,
+            default:null
+        },
         time_label:{
             type:cc.Label,
             default:null
@@ -35,7 +39,8 @@ cc.Class({
         count:'01:00:00',
         time_over:false,
         count_time:100,
-        time_co:null
+        time_co:null,
+        blood:100
     },
 	//倒计时
 	countDown(time){
@@ -75,8 +80,42 @@ cc.Class({
 	   return leftTime
 	},
     // LIFE-CYCLE CALLBACKS:
-
+    onDeviceOrientationChangeEvent(data){
+        console.log(data)
+    },
+	// 获取陀螺仪权限
+	getGyroscope(){
+        console.log(this.target_go)
+		let _this = this
+		if ( window.DeviceOrientationEvent !== undefined && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
+			window.DeviceOrientationEvent.requestPermission().then( function ( response ) {
+				if ( response == 'granted' ) {
+					window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
+				} else if( response == 'denied' ) {
+				}
+			} ).catch( function ( error ) {
+			} );
+		} else {
+			window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
+		}
+	},
+	// 目标随机运动
+	targetMove(){
+		let _this = this
+		let time_interval = Math.floor(Math.random()*(1000 - 3000) + 3000)
+		let time = setTimeout(() => {
+            cc.tween(this.target_go.node).to(.5,{position:cc.v2(Math.floor(Math.random()*(-70 - 70) + 70),Math.floor(Math.random()*(-40 - 10) + 10))}).start()
+			if(_this.blood <= 0 || this.count_time == 0){
+				clearTimeout(time)
+			}else{
+				_this.targetMove()
+			}
+		}, time_interval);
+		// console.log(time_interval)	
+	},
     onLoad () {
+        let p = cc.director.getCollisionManager()
+        p.enabled = true
         let _this = this
         var endTime = new Date(new Date().getTime() + 60000)  //下一分钟
         this.time_co = setInterval(function (){
@@ -85,6 +124,8 @@ cc.Class({
                  clearInterval(_this.time_co)
              }
      },50)
+     this.getGyroscope()
+     this.targetMove()
     },
 
     start () {
