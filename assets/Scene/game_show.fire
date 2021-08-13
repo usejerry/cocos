@@ -85,18 +85,21 @@
       },
       {
         "__id__": 24
+      },
+      {
+        "__id__": 30
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 30
-      },
-      {
         "__id__": 31
       },
       {
         "__id__": 32
+      },
+      {
+        "__id__": 33
       }
     ],
     "_prefab": null,
@@ -186,7 +189,7 @@
       "array": [
         0,
         0,
-        413.09411760517725,
+        411.3620667976084,
         0,
         0,
         0,
@@ -1296,8 +1299,8 @@
         0,
         0.008726535498373935,
         0.9999619230641713,
-        0.9,
-        0.9,
+        1,
+        1,
         1
       ]
     },
@@ -1386,6 +1389,22 @@
       "__id__": 24
     },
     "_enabled": true,
+    "game_show": null,
+    "target_go_h": {
+      "__uuid__": "86fd5580-01c1-4f7e-938d-afb601faa425"
+    },
+    "target_go_t": {
+      "__uuid__": "79c24ab6-989e-4225-a4c1-386b1884d0ce"
+    },
+    "isOk": false,
+    "toX": 0,
+    "toY": 0,
+    "span_h": 5.625,
+    "span_w": 0,
+    "toch_x": 0,
+    "toch_y": 0,
+    "start_ealpha": 0,
+    "start_ebeta": 0,
     "_id": "4drgmQLltIl4JXOBJSusr1"
   },
   {
@@ -1408,6 +1427,64 @@
       "height": 380
     },
     "_id": "6bY5mtBiFA2YcYxXz/ouh4"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "game_box",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 400,
+      "height": 250
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        -1.95,
+        -37.058,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "_groupIndex": 0,
+    "groupIndex": 0,
+    "_id": "4cuVKKDBZBrodWmFJwUOwk"
   },
   {
     "__type__": "cc.Canvas",
@@ -1463,6 +1540,9 @@
     "_enabled": true,
     "target_go": {
       "__id__": 8
+    },
+    "boom": {
+      "__id__": 27
     },
     "time_label": {
       "__id__": 14

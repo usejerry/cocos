@@ -28,6 +28,10 @@ cc.Class({
             type:cc.Sprite,
             default:null
         },
+        boom:{
+            type:cc.Sprite,
+            default:null
+        },
         time_label:{
             type:cc.Label,
             default:null
@@ -79,26 +83,6 @@ cc.Class({
 		//递归每秒调用countTime方法，显示动态时间效果
 	   return leftTime
 	},
-    // LIFE-CYCLE CALLBACKS:
-    onDeviceOrientationChangeEvent(data){
-        console.log(data)
-    },
-	// 获取陀螺仪权限
-	getGyroscope(){
-        console.log(this.target_go)
-		let _this = this
-		if ( window.DeviceOrientationEvent !== undefined && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
-			window.DeviceOrientationEvent.requestPermission().then( function ( response ) {
-				if ( response == 'granted' ) {
-					window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
-				} else if( response == 'denied' ) {
-				}
-			} ).catch( function ( error ) {
-			} );
-		} else {
-			window.addEventListener( 'deviceorientation', _this.onDeviceOrientationChangeEvent, false );
-		}
-	},
 	// 目标随机运动
 	targetMove(){
 		let _this = this
@@ -124,7 +108,8 @@ cc.Class({
                  clearInterval(_this.time_co)
              }
      },50)
-     this.getGyroscope()
+    //  console.log(this.boom.getComponent('boom').game_show,2222)
+    this.boom.getComponent('boom').game_show = this
      this.targetMove()
     },
 

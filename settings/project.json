@@ -1,5 +1,5 @@
 {
-  "last-module-event-record-time": 1628085468919,
+  "last-module-event-record-time": 1628843894131,
   "group-list": [
     "default",
     "boom",
@@ -21,7 +21,14 @@
     ]
   ],
   "excluded-modules": [
-    "3D Physics/Builtin"
+    "Audio",
+    "AudioSource",
+    "3D",
+    "3D Primitive",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle",
+    "SafeArea"
   ],
   "preview-port": 7456,
   "design-resolution-width": 400,

@@ -36,7 +36,6 @@ cc.Class({
         an.on('finished',this.go_finish,this)
     },
     go_finish(){
-        this.getGyroscope()
         cc.director.loadScene('home')
     },
     start () {
