@@ -46,7 +46,7 @@ cc.Class({
     },
     getUserData(data){
         let _this = this
-        this.userInfo_name.string = data.userInfo.nickName;
+        this.userInfo_name.string = data.userInfo.nickName; 
                     
         cc.loader.load({url: data.userInfo.avatarUrl, type: 'png'}, function(err,img){    
             var myIcon  = new cc.SpriteFrame(img);      
