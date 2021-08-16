@@ -52,7 +52,7 @@ cc.Class({
             var myIcon  = new cc.SpriteFrame(img);      
             _this.userInfo_head_img.spriteFrame = myIcon;
         
-        });
+        }); 
 
     },
     wx_login() {
