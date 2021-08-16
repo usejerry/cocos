@@ -113,7 +113,6 @@ cc.Class({
     start () {
 
     },
-
     update (dt) {
         // _this.egammaData = _this.egammaData+(_this.toX -_this.egammaData)*0.1
         // _this.ebetaData = _this.ebetaData+(_this.toY -_this.ebetaData)*0.1

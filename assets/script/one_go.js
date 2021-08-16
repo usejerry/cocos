@@ -59,7 +59,40 @@ cc.Class({
 
     },
     goTwo:function(button){
+        console.log(button)
+        if (window.wx) {//确定是在微信真机环境下
+            wx.getSystemInfo({
+                success: function(data) {
+                    btnWeixinUser = wx.createUserInfoButton({//定义按钮样式
+                        type: 'text',
+                        text: '微信授权',
+                        style: {
+                            opacity: 0,
+                            left: data.screenWidth * 0.2,
+                            top: data.screenHeight * 0.73,
+                            width: data.screenWidth * 0.65,
+                            height: data.screenHeight * 0.07,
+                            lineHeight: data.screenHeight * 0.07,
+                            background: '#fe714a',
+                            color: '#ffffff',
+                            textAlign: 'center',
+                            fontSize: data.screenHeight * 0.025,
+                            borderRadius: 8
+                        }
+                    });
+                    btnWeixinUser.onTap(function(res) {//响应回调，获取信息
+                        nickName = res.userInfo.nickName;
+                        var url = res.userInfo.avatarUrl;
+                        console.log(res)
+                    });
+                }
+            });
+        } 
         cc.director.loadScene('game_show')
     },
     // update (dt) {},
+    start(){
+        let btnWeixinUser =null
+        let nickName = ''
+    }
 });
