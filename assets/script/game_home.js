@@ -50,7 +50,7 @@ cc.Class({
                     
         cc.loader.load({url: data.userInfo.avatarUrl, type: 'png'}, function(err,img){    
             var myIcon  = new cc.SpriteFrame(img);      
-            _this.userInfo_head_img.spriteFrame = myIcon;
+            _this.userInfo_head_img.spriteFrame = myIcon; 
         
         }); 
 
