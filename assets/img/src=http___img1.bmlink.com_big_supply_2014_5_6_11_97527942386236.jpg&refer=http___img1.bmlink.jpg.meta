@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "c89ac604-8b0b-4cfb-89e8-fd77d418f5cb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 920,
+  "height": 549,
+  "platformSettings": {},
+  "subMetas": {
+    "src=http___img1.bmlink.com_big_supply_2014_5_6_11_97527942386236.jpg&refer=http___img1.bmlink": {
+      "ver": "1.0.4",
+      "uuid": "cbb08a83-46c9-4542-b4b5-646344314986",
+      "rawTextureUuid": "c89ac604-8b0b-4cfb-89e8-fd77d418f5cb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 920,
+      "height": 549,
+      "rawWidth": 920,
+      "rawHeight": 549,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

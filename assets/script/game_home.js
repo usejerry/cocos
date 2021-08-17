@@ -16,8 +16,15 @@ cc.Class({
         userInfo_head_img :{
             type:cc.Sprite,
             default:null
-        }
-
+        },
+        bg:{
+            type:cc.Node,
+            default:null
+        },
+        zt:{
+            type:[cc.SpriteFrame],
+            default:[]
+        },
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -38,9 +45,55 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        
+        this.setBgImg()
     },
+    setBgImg(){
+        let z_y =parseInt(this.node.height/33)
+        let z_x = this.node.width/100
+        // for(let j=0;j<4;j++){
+        //     var s = new cc.Node('zt'+'-'+j)
+        //     var sprite =s.addComponent(cc.Sprite)
+        //     sprite.sizeMode = 'custom'
+        //     s.width = 100
+        //     s.height = 33
+            
+        //     // s.setPosition(cc.v2(200-j*100-50,350-16.5-0*33))
+        //     s.setPosition(cc.v2(200-50,350-16.5-0*33))
+        //     cc.tween(s).to(.1*j+1,{position:cc.v2(200-j*100-50,350-16.5-0*33)}).start()
+        //     sprite.spriteFrame = this.zt[Math.floor(Math.random()*3)]
+        //     this.bg.addChild(s)
+        // }
+        for(let i=0;i<=z_y;i++){
+            if(i%2==0){
+                for(let j=0;j<4;j++){
+                    var s = new cc.Node('zt'+i+'-'+j)
+                    var sprite =s.addComponent(cc.Sprite)
+                    sprite.sizeMode = 'custom'
+                    s.width = 100
+                    s.height = 33
+                    s.setPosition(cc.v2(0,0))
+                    // s.setPosition(cc.v2(200-j*100-50,350-16.5-i*33))
+                    cc.tween(s).to(1,{position:cc.v2(200-j*100-50,350-16.5-i*33)}).start()
+                    sprite.spriteFrame = this.zt[Math.floor(Math.random()*3)]
+                    this.bg.addChild(s)
+                }
+            }else{
+                for(let j=0;j<5;j++){
+                    var s = new cc.Node('zt'+i+'-'+j)
+                    var sprite =s.addComponent(cc.Sprite)
+                    sprite.sizeMode = 'custom'
+                    s.width = 80
+                    s.height=33       
+                    s.setPosition(cc.v2(0,0))
+                    // s.setPosition(cc.v2(200-j*80-40,350-16.5-i*33))            
+                    cc.tween(s).to(1,{position:cc.v2(200-j*80-40,350-16.5-i*33)}).start() 
+                    sprite.spriteFrame = this.zt[Math.floor(Math.random()*3)]
+                    this.bg.addChild(s)
+                }
+            }
+        }
 
+    },
     start () {
         this.wx_login()
     },
@@ -57,7 +110,6 @@ cc.Class({
     },
     wx_login() {
         let _this  = this
-        console.log( _this.userInfo_head_img)
         if (window.wx) {//确定是在微信真机环境下
             let sysInfo = wx.getSystemInfoSync();
             //获取微信界面大小
