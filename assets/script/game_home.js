@@ -25,6 +25,10 @@ cc.Class({
             type:[cc.SpriteFrame],
             default:[]
         },
+        games:{
+            type:cc.Node,
+            default:null
+        },
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -43,7 +47,10 @@ cc.Class({
     },
 
     // LIFE-CYCLE CALLBACKS:
-
+    go_scence(data){
+        this.node.runAction(cc.fadeOut(1.0));
+        cc.director.loadScene('game_show')
+    },
     onLoad () {
         this.setBgImg()
     },
@@ -145,5 +152,6 @@ cc.Class({
             });
         } 
     },
+    
     // update (dt) {},
 });

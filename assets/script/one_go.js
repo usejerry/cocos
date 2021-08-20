@@ -55,6 +55,7 @@ cc.Class({
         scriptComponent.setTips("错误")
     },
     goOne:function(button){
+        this.node.runAction(cc.fadeOut(1.0));
         cc.director.loadScene('two_scene')
 
     },
