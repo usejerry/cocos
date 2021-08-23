@@ -29,6 +29,18 @@ cc.Class({
             type:cc.Node,
             default:null
         },
+        draw_box:{
+            type:cc.Graphics,
+            default:null
+        },
+        draw_moveTo:{
+            type:cc.v2,
+            default:null
+        },
+        draw_lineTos:{
+            type:[cc.v2],
+            default:[]            
+        }
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -53,6 +65,7 @@ cc.Class({
     },
     onLoad () {
         this.setBgImg()
+        this.drawwing()
     },
     setBgImg(){
         let z_y =parseInt(this.node.height/33)
@@ -100,6 +113,40 @@ cc.Class({
             }
         }
 
+    },
+    drawStart(e){
+        this.draw_moveTo = e.getLocation()
+        // this.draw_box.moveTo(e.getLocation().x,e.getLocation().y)
+        this.draw_box.moveTo(0,0)
+
+        console.log(e.getLocation().x-this.node.getChildByName('draw').width/2,
+        e.getLocation().y-this.node.getChildByName('draw').y-350)
+    },
+    drawMove(e){
+        this.draw_box.lineTo(e.getLocation().x-this.node.getChildByName('draw').width/2,e.getLocation().y-this.node.getChildByName('draw').y-350)
+        this.draw_box.stroke()
+        // console.log(e.getLocation().x,e.getLocation().y)
+    },
+    drawEnd(e){
+        // console.log(e)
+        // this.draw_box.lineTo(e.getLocation().x,e.getLocation().y-this.node.getChildByName('draw').x-350-this.node.getChildByName('draw').height)
+        // // this.draw_box.lineTo(100,200)
+        // // console.log(e.getLocation().x,e.getLocation().y-this.node.getChildByName('draw').x-350-this.node.getChildByName('draw').height/2)
+        // this.draw_box.stroke()
+    },
+    drawwing(){
+        this.draw_box =this.node.getChildByName('draw').getComponent(cc.Graphics);
+        console.log(this.draw_box)
+        this.draw_box.moveTo(100,100)
+        this.draw_box.lineTo(0,0)
+        this.draw_box.stroke()
+        this.node.getChildByName('draw').on('touchstart',this.drawStart,this)
+        this.node.getChildByName('draw').on('touchmove',this.drawMove,this)
+        this.node.getChildByName('draw').on('touchend',this.drawEnd,this)
+        // this.node.getChildByName('draw').on('touchcancel',this.drawStart,this)
+
+
+        // ctx.fill();
     },
     start () {
         this.wx_login()
