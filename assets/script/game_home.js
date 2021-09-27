@@ -41,10 +41,10 @@ cc.Class({
             type:[cc.v2],
             default:[]            
         },
-        draw_ok:{
-            type:cc.Boolean,
-            default:false
-        }
+        // draw_ok:{
+        //     type:cc.Boolean,
+        //     default:false
+        // }
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -65,11 +65,16 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
     go_scence(data){
         this.node.runAction(cc.fadeOut(1.0));
+        console.log(this.node)
+        cc.director.loadScene('game_drawing')
+    },
+    go_scence2(data){
+        this.node.runAction(cc.fadeOut(1.0));
+        console.log(this.node)
         cc.director.loadScene('game_show')
     },
     onLoad () {
         this.setBgImg()
-        this.drawwing()
     },
     setBgImg(){
         let z_y =parseInt(this.node.height/33)
@@ -116,7 +121,7 @@ cc.Class({
                 }
             }
         }
-
+        console.log(this.bg)
     },
     drawStart(e){
         this.draw_ok = true
