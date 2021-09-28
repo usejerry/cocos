@@ -4,6 +4,8 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
+// import createImg from './capture_to_web.js'
+let createImg = require('./capture_to_web');
 
 cc.Class({
     extends: cc.Component,
@@ -60,6 +62,10 @@ cc.Class({
     start () {
         
     },
+    jtu(){
+        this.node.getChildByName('draw_b_box').getChildByName('Camera').getComponent('capture_to_web').captureImg()
+       console.log(this.node.getChildByName('draw_b_box').getChildByName('Camera'));
+    },
     drawStart(e){
         this.draw_ok = true
         this.draw_moveTo = e.getLocation()
@@ -115,6 +121,9 @@ cc.Class({
             this['draw_box'+(i+1-0)].lineTo(va.x,va.y)
             this['draw_box'+(i+1-0)].stroke()
         }
+    },
+    comebackHome(){
+        cc.director.loadScene('games_home')
     },
     drawEnd(e){
         this.draw_ok = false
