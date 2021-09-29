@@ -20,32 +20,34 @@ cc.Class({
     createImg () {
         // return the type and dataUrl
         var dataURL = this._canvas.toDataURL("image/png");
-        if (this._img == undefined) {
-            this._img = document.createElement("img");
-            this._img.setAttribute("id","capture_img");
-            this._img.alt = 'bigImg';
-            this._img.style.opactiy = 1;
+        this._img = new Image();
+        // if (this._img == undefined) {
+        //     this._img = document.createElement("img");
+        //     this._img.setAttribute("id","capture_img");
+        //     this._img.alt = 'bigImg';
+        //     this._img.style.opactiy = 1;
 
-            var b = cc.view.getFrameSize()
-            console.log(b)
-            var bx = b.width
-            var by = b.height
+        //     var b = cc.view.getFrameSize()
+        //     console.log(b)
+        //     var bx = b.width
+        //     var by = b.height
 
-            var ratio = bx / this.texture.width;
+        //     var ratio = bx / this.texture.width;
 
 
-            // this._img.width = bx;
-            // this._img.height = Math.floor(this.texture.height * ratio);
-            this._img.width = this.captureRoot.width;
-            this._img.height = this.captureRoot.height            
-            var iy = Math.floor(60 * ratio);
+        //     // this._img.width = bx;
+        //     // this._img.height = Math.floor(this.texture.height * ratio);
+        //     this._img.width = this.captureRoot.width;
+        //     this._img.height = this.captureRoot.height            
+        //     var iy = Math.floor(60 * ratio);
 
-            this._img.style.position = 'absolute';
-            this._img.style.top = "" + 10 + "px";//y坐标
-            this._img.style.left = "50%";//设置图片居中显示
-            this._img.style.transform = 'translateX(-50%)'
-        }
+        //     this._img.style.position = 'absolute';
+        //     this._img.style.top = "" + 10 + "px";//y坐标
+        //     this._img.style.left = "50%";//设置图片居中显示
+        //     this._img.style.transform = 'translateX(-50%)'
+        // }
         this._img.src = dataURL;
+
         return this._img;
     },
     // create the canvas and context, filpY the image Data
@@ -89,10 +91,10 @@ cc.Class({
     showImage (img) {
 
         if (this._gameDiv == undefined) {
-            this._gameDiv = document.getElementById('Cocos2dGameContainer');//获取div元素
-            console.log(this._gameDiv)
-            img.style.visibility = "visible";
-            this._gameDiv.appendChild(img);  
+            // this._gameDiv = document.getElementById('Cocos2dGameContainer');//获取div元素
+            // console.log(img)
+            // img.style.visibility = "visible";
+            // this._gameDiv.appendChild(img);  
         } else {
             img.style.visibility = "visible";
         }

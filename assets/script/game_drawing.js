@@ -11,6 +11,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        create_img_box:{
+            type:cc.Node,
+            default:null
+        },
         draw_box1:{
             type:cc.Graphics,
             default:null
@@ -63,8 +67,14 @@ cc.Class({
         
     },
     jtu(){
-        this.node.getChildByName('draw_b_box').getChildByName('Camera').getComponent('capture_to_web').captureImg()
-       console.log(this.node.getChildByName('draw_b_box').getChildByName('Camera'));
+        console.log(this.create_img_box)
+        if(this.create_img_box.children.length>0){
+            this.create_img_box.children[0].destroy()
+            this.create_img_box.addChild(this.node.getChildByName('draw_b_box').getChildByName('Camera').getComponent('capture_to_web').captureImg())
+        }else{
+            this.create_img_box.addChild(this.node.getChildByName('draw_b_box').getChildByName('Camera').getComponent('capture_to_web').captureImg())
+        }
+    //    console.log(this.node.getChildByName('draw_b_box').getChildByName('Camera'));
     },
     drawStart(e){
         this.draw_ok = true
